@@ -1,0 +1,609 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+
+:root {
+  --cor-base: #f6fff8;
+  --cor-sinan: #4f731a;
+  --cor-formas: #a5c871;
+  --cor-preto: #000000;
+  --cor-escuro: #454545;
+  --cor-transmissiveis: #a63446;
+  --cor-nao: #0e6ba8;
+  --cor-naohover: #76beee;
+  --cor-agudas: #ffbf47;
+  --cor-antropo: #978de2;
+  --cor-trabalho: #48a9a6;
+  --cor-individuais: #fcb879;
+  --cor-individuaishover: #eb9b50;
+  --cor-cinza: #d3dcf7;
+  --cor-secundaria: #91acff;
+  --fonte: "Fira Code", monospace;
+}
+
+body {
+  background-color: var(--cor-base);
+  color: var(--cor-preto);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.titulo__principal {
+  font-size: 45px;
+  font-weight: 400;
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 60px; 
+}
+
+.menu__principal {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.align__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu__open {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 81%;
+  gap: 20px;
+  width: 100%;
+}
+
+.box__padrao {
+  display: flex;
+  background-color: var(--cor-formas);
+  width: 20%;
+  height: 100px;
+  border-radius: 5px;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+  color: var(--cor-escuro);
+}
+
+.box__padrao:hover {
+  cursor: pointer;
+  background-color: var(--cor-sinan);
+  color: white;
+  -webkit-box-shadow: 25px 16px 36px -25px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 25px 16px 36px -25px rgba(0, 0, 0, 1);
+  box-shadow: 25px 16px 36px -25px rgba(0, 0, 0, 1);
+}
+
+.box__secundario {
+  display: flex;
+  background-color: var(--cor-cinza);
+  width: 35%;
+  height: 30px;
+  border-radius: 5px;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  color: var(--cor-escuro);
+}
+
+.box__secundario:hover {
+  cursor: pointer;
+  background-color: var(--cor-secundaria);
+  color: white;
+  -webkit-box-shadow: 25px 16px 36px -25px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 25px 16px 36px -25px rgba(0, 0, 0, 1);
+  box-shadow: 25px 16px 36px -25px rgba(0, 0, 0, 1);
+}
+
+.texto__primario {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: var(--fonte);
+  text-align: center;
+  text-decoration: none;
+}
+
+.texto__titulo {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: var(--fonte);
+  text-decoration: none;
+}
+
+.texto__secundario {
+  font-family: var(--fonte);
+  text-align: justify;
+  font-size: 18px;
+}
+
+.rodape {
+  position: fixed;
+  bottom: 0.5;
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown__menu {
+  position: relative;
+  display: inline-block;
+  width: 60%;
+}
+
+.dropBackground {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2em 0.5em 2em 0.5em;
+  box-sizing: border-box;
+  z-index: 1000;
+  color: #000000;
+}
+
+.box__modal {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 40%;
+  height: 40%;
+  gap: 35px;
+  padding: 30px;
+  cursor: default;
+}
+
+.border__transmissiveis {
+  border-left: 2rem solid var(--cor-transmissiveis);
+}
+
+.border__nao {
+  border-left: 2rem solid var(--cor-nao);
+}
+
+.border__agudas {
+  border-left: 2rem solid var(--cor-agudas);
+}
+
+.border__antropo {
+  border-left: 2rem solid var(--cor-antropo);
+}
+
+.border__trabalho {
+  border-left: 2rem solid var(--cor-trabalho);
+}
+
+.border__individuais {
+  border-left: 2rem solid var(--cor-individuais);
+}
+
+.border__SIM {
+  border-left: 2rem solid var(--cor-secundaria);
+}
+
+.border__SINASC {
+  border-left: 2rem solid var(--cor-secundaria);
+}
+
+.align__items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.show {
+  display: flex;
+}
+
+.select__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown Transmissiveis */
+
+.dropdownTransmissiveis {
+  display: flex;
+  position: relative;
+  width: 230px;
+  height: 30px;
+}
+
+.dropdownTransmissiveis::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  right: 0px;
+  left: 240px;
+  top: 15px;
+  z-index: 10000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdownTransmissiveis.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdownTransmissiveis input {
+  position: absolute;
+  font-family: var(--fonte);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.dropdownTransmissiveis .option {
+  position: absolute;
+  top: 70px;
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  overflow-y: scroll;
+  max-height: 150px;
+  font-family: var(--fonte);
+}
+
+.dropdownTransmissiveis.active .option {
+  display: block;
+}
+
+.dropdownTransmissiveis .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdownTransmissiveis .option div:hover {
+  background: var(--cor-transmissiveis);
+  color: #fff;
+}
+
+/* Dropdown Nao-trans */
+
+.botao__violencias {
+  font-family: var(--fonte);
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--cor-nao);
+}
+
+.botao__violencias:hover {
+  color: black;
+  background: var(--cor-naohover);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown Agudas */
+
+.dropdownAgudas {
+  display: flex;
+  position: relative;
+  width: 230px;
+  height: 30px;
+}
+
+.dropdownAgudas::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  right: 0px;
+  left: 240px;
+  top: 15px;
+  z-index: 10000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdownAgudas.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdownAgudas input {
+  position: absolute;
+  font-family: var(--fonte);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.dropdownAgudas .option {
+  position: absolute;
+  top: 70px;
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  overflow-y: scroll;
+  max-height: 150px;
+  font-family: var(--fonte);
+}
+
+.dropdownAgudas.active .option {
+  display: block;
+}
+
+.dropdownAgudas .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdownAgudas .option div:hover {
+  background: var(--cor-agudas);
+  color: #fff;
+}
+
+/* Dropdown Antropo */
+
+.dropdownAntropo {
+  display: flex;
+  position: relative;
+  width: 230px;
+  height: 30px;
+}
+
+.dropdownAntropo::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  right: 0px;
+  left: 240px;
+  top: 15px;
+  z-index: 10000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdownAntropo.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdownAntropo input {
+  position: absolute;
+  font-family: var(--fonte);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.dropdownAntropo .option {
+  position: absolute;
+  top: 70px;
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  overflow-y: scroll;
+  max-height: 150px;
+  font-family: var(--fonte);
+}
+
+.dropdownAntropo.active .option {
+  display: block;
+}
+
+.dropdownAntropo .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdownAntropo .option div:hover {
+  background: var(--cor-antropo);
+  color: #fff;
+}
+
+/* Dropdown Trabalho */
+
+.dropdownTrabalho {
+  display: flex;
+  position: relative;
+  width: 230px;
+  height: 30px;
+}
+
+.dropdownTrabalho::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  right: 0px;
+  left: 240px;
+  top: 15px;
+  z-index: 10000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdownTrabalho.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdownTrabalho input {
+  position: absolute;
+  font-family: var(--fonte);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.dropdownTrabalho .option {
+  position: absolute;
+  top: 70px;
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  overflow-y: scroll;
+  max-height: 150px;
+  font-family: var(--fonte);
+}
+
+.dropdownTrabalho.active .option {
+  display: block;
+}
+
+.dropdownTrabalho .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdownTrabalho .option div:hover {
+  background: var(--cor-trabalho);
+  color: #fff;
+}
+/* Dropdown Notif Indiviual */
+
+.botao__individuais {
+  font-family: var(--fonte);
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  color: black;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--cor-individuais);
+}
+
+.botao__individuais:hover {
+  color: black;
+  background: var(--cor-individuaishover);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown SIM */
+
+.botao__SIM {
+  font-family: var(--fonte);
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--cor-secundaria);
+}
+
+.botao__SIM:hover {
+  color: black;
+  background: var(--cor-cinza);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown SINASC */
+
+.botao__SINASC {
+  font-family: var(--fonte);
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--cor-secundaria);
+}
+
+.botao__SINASC:hover {
+  color: black;
+  background: var(--cor-cinza);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+}

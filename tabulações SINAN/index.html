@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TABULAÇÕES - CEVS/SES/RS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="imagem/png" href="img/logo sinan.png" />
+  </head>
+  <script>
+    function showDropTransmissiveis() {
+      document.getElementById("dropTransmissiveis").classList.toggle("show");
+      document.getElementById("dropNaoTransmissiveis").classList.remove("show");
+      document.getElementById("dropAgudas").classList.remove("show");
+      document.getElementById("dropAntropo").classList.remove("show");
+      document.getElementById("dropTrabalho").classList.remove("show");
+      document.getElementById("dropSIM").classList.remove("show");
+      document.getElementById("dropSINASC").classList.remove("show");
+      document.getElementById("dropNotif").classList.remove("show");
+    }
+
+    function showDropNaoTransmissiveis() {
+      document.getElementById("dropNaoTransmissiveis").classList.toggle("show");
+      document.getElementById("dropTransmissiveis").classList.remove("show");
+      document.getElementById("dropAgudas").classList.remove("show");
+      document.getElementById("dropAntropo").classList.remove("show");
+      document.getElementById("dropTrabalho").classList.remove("show");
+      document.getElementById("dropSIM").classList.remove("show");
+      document.getElementById("dropSINASC").classList.remove("show");
+      document.getElementById("dropNotif").classList.remove("show");
+    }
+
+    function showDropAgudas() {
+      document.getElementById("dropAgudas").classList.toggle("show");
+      document.getElementById("dropTransmissiveis").classList.remove("show");
+      document.getElementById("dropNaoTransmissiveis").classList.remove("show");
+      document.getElementById("dropAntropo").classList.remove("show");
+      document.getElementById("dropTrabalho").classList.remove("show");
+      document.getElementById("dropSIM").classList.remove("show");
+      document.getElementById("dropSINASC").classList.remove("show");
+      document.getElementById("dropNotif").classList.remove("show");
+    }
+
+    function showDropAntropo() {
+      document.getElementById("dropAntropo").classList.toggle("show");
+      document.getElementById("dropTransmissiveis").classList.remove("show");
+      document.getElementById("dropNaoTransmissiveis").classList.remove("show");
+      document.getElementById("dropAgudas").classList.remove("show");
+      document.getElementById("dropTrabalho").classList.remove("show");
+      document.getElementById("dropSIM").classList.remove("show");
+      document.getElementById("dropSINASC").classList.remove("show");
+      document.getElementById("dropNotif").classList.remove("show");
+    }
+
+    function showDropTrabalho() {
+      document.getElementById("dropTrabalho").classList.toggle("show");
+      document.getElementById("dropTransmissiveis").classList.remove("show");
+      document.getElementById("dropAgudas").classList.remove("show");
+      document.getElementById("dropNaoTransmissiveis").classList.remove("show");
+      document.getElementById("dropAntropo").classList.remove("show");
+      document.getElementById("dropSIM").classList.remove("show");
+      document.getElementById("dropSINASC").classList.remove("show");
+      document.getElementById("dropNotif").classList.remove("show");
+    }
+
+    function showDropSIM() {
+      document.getElementById("dropSIM").classList.toggle("show");
+      document.getElementById("dropTransmissiveis").classList.remove("show");
+      document.getElementById("dropNaoTransmissiveis").classList.remove("show");
+      document.getElementById("dropAgudas").classList.remove("show");
+      document.getElementById("dropAntropo").classList.remove("show");
+      document.getElementById("dropTrabalho").classList.remove("show");
+      document.getElementById("dropSINASC").classList.remove("show");
+      document.getElementById("dropNotif").classList.remove("show");
+    }
+
+    function showDropSINASC() {
+      document.getElementById("dropSINASC").classList.toggle("show");
+      document.getElementById("dropTransmissiveis").classList.remove("show");
+      document.getElementById("dropNaoTransmissiveis").classList.remove("show");
+      document.getElementById("dropAgudas").classList.remove("show");
+      document.getElementById("dropAntropo").classList.remove("show");
+      document.getElementById("dropTrabalho").classList.remove("show");
+      document.getElementById("dropSIM").classList.remove("show");
+      document.getElementById("dropNotif").classList.remove("show");
+    }
+
+    function showDropNotif() {
+      document.getElementById("dropNotif").classList.toggle("show");
+      document.getElementById("dropTransmissiveis").classList.remove("show");
+      document.getElementById("dropNaoTransmissiveis").classList.remove("show");
+      document.getElementById("dropAgudas").classList.remove("show");
+      document.getElementById("dropAntropo").classList.remove("show");
+      document.getElementById("dropTrabalho").classList.remove("show");
+      document.getElementById("dropSIM").classList.remove("show");
+      document.getElementById("dropSINASC").classList.remove("show");
+    }
+
+    document.addEventListener("click", function (event) {
+      var dropTransmissiveis = document.getElementById("dropTransmissiveis");
+      var dropNaoTransmissiveis = document.getElementById(
+        "dropNaoTransmissiveis"
+      );
+      var dropAgudas = document.getElementById("dropAgudas");
+      var dropAntropo = document.getElementById("dropAntropo");
+      var dropTrabalho = document.getElementById("dropTrabalho");
+      var dropSIM = document.getElementById("dropSIM");
+      var dropSINASC = document.getElementById("dropSINASC");
+      var dropNotif = document.getElementById("dropNotif");
+      var isMenuClick = event.target.closest(".menu__principal");
+
+      if (!isMenuClick) {
+        dropTransmissiveis.classList.remove("show");
+        dropNaoTransmissiveis.classList.remove("show");
+        dropAgudas.classList.remove("show");
+        dropAntropo.classList.remove("show");
+        dropTrabalho.classList.remove("show");
+        dropSIM.classList.remove("show");
+        dropSINASC.classList.remove("show");
+        dropNotif.classList.remove("show");
+      }
+    });
+  </script>
+
+  <body>
+    <div class="titulo">
+      <h1 class="titulo__principal">
+        TABULAÇÕES DA VIGILÂNCIA EPIDEMIOLÓGICA - CEVS/SES/RS
+      </h1>
+    </div>
+
+    <div class="menu">
+      <div class="align__menu">
+        <div class="menu__principal">
+          <span class="box__padrao" onclick="showDropTransmissiveis()">
+            <span class="texto__primario"
+              >Doenças Crônicas Transmissíveis
+            </span>
+            <div class="dropBackground" id="dropTransmissiveis">
+              <div
+                class="box__modal border__transmissiveis"
+                onclick="event.stopPropagation()"
+              >
+                <div class="align__items">
+                  <span class="texto__titulo">O que são?</span>
+                  <span class="texto__secundario">
+                    As doenças crônicas transmissíveis têm longa duração e
+                    progressão muitas vezes lenta, desenvolvendo-se a partir do
+                    contato com agentes contagiantes, como protozoários,
+                    bactérias e vírus.
+                  </span>
+                </div>
+                <div class="select__div">
+                  <div class="dropdownTransmissiveis">
+                    <input
+                      type="text"
+                      class="textBox"
+                      placeholder="Selecione"
+                      readonly
+                    />
+                    <div class="option">
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/aidsanet')"
+                      >
+                        AIDS Adulto
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/aidscrinet')"
+                      >
+                        AIDS Criança
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/hansrsnet')"
+                      >
+                        Hanseníase
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsa')"
+                      >
+                        Hepatite A
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsb')"
+                      >
+                        Hepatite B
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsc')"
+                      >
+                        Hepatite C
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/sifiliscnet')"
+                      >
+                        Sífilis Congênita
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/sifilisgnet')"
+                      >
+                        Sífilis em Gestante
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/tubercrsnet')"
+                      >
+                        Tuberculose
+                      </div>
+                    </div>
+                  </div>
+                  <script
+                    type="module"
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                  ></script>
+                  <script
+                    nomodule
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                  ></script>
+
+                  <script>
+                    function select(anything) {
+                      document.querySelector(".textBox").value = anything;
+                    }
+
+                    let dropdownTransmissiveis = document.querySelector(
+                      ".dropdownTransmissiveis"
+                    );
+                    dropdownTransmissiveis.onclick = () => {
+                      dropdownTransmissiveis.classList.toggle("active");
+                    };
+                  </script>
+                </div>
+              </div>
+            </div>
+          </span>
+          <span class="box__padrao" onclick="showDropNaoTransmissiveis()">
+            <span class="texto__primario"
+              >Doenças e Agravos Não-transmissíveis</span
+            >
+            <div class="dropBackground" id="dropNaoTransmissiveis">
+              <div
+                class="box__modal border__nao"
+                onclick="event.stopPropagation()"
+              >
+                <div class="align__items">
+                  <span class="texto__titulo">O que são?</span>
+                  <span class="texto__secundario">
+                    Doenças e agravos não transmissíveis (DANT) são doenças ou
+                    agravos cuja etiologia não está diretamente relacionada a um
+                    agente biológico, mas a múltiplas causas de origem física,
+                    social, econômica e ambiental.
+                  </span>
+                </div>
+                <div class="select__div">
+                  <button
+                    class="botao__violencias"
+                    type="button"
+                    onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/violencianet');"
+                  >
+                    Violências
+                  </button>
+                </div>
+              </div>
+            </div>
+          </span>
+          <span class="box__padrao" onclick="showDropAgudas()">
+            <span class="texto__primario"
+              >Doenças Agudas e Imunopreveníveis</span
+            >
+            <div class="dropBackground" id="dropAgudas">
+              <div
+                class="box__modal border__agudas"
+                onclick="event.stopPropagation()"
+              >
+                <div class="align__items">
+                  <span class="texto__titulo">O que são?</span>
+                  <span class="texto__secundario">
+                    As doenças imunopreveníveis são doenças que podem ser
+                    prevenidas por meio de vacinação e são divididas entre
+                    virais e bacterianas.
+                  </span>
+                </div>
+                <div class="select__div">
+                  <div class="dropdownAgudas">
+                    <input
+                      type="text"
+                      class="textBox"
+                      placeholder="Selecione"
+                      readonly
+                    />
+                    <div class="option">
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/coquersnet')"
+                      >
+                        Coqueluche
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/diftersw')"
+                      >
+                        Difteria
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/exantrsw')"
+                      >
+                        Doenças Exantemáticas
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/meningersnet')"
+                      >
+                        Meningite
+                      </div>
+                      <!--  <div
+                        onclick="window.open('Síndrome Respiratória Aguda Grave')"
+                      >
+                        Síndrome Respiratória Aguda Grave
+                      </div> -->
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/tetacidrsw')"
+                      >
+                        Tétano Acidental
+                      </div>
+                    </div>
+                  </div>
+                  <script
+                    type="module"
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                  ></script>
+                  <script
+                    nomodule
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                  ></script>
+
+                  <script>
+                    function select(anything) {
+                      document.querySelector(".textBox").value = anything;
+                    }
+
+                    let dropdownAgudas =
+                      document.querySelector(".dropdownAgudas");
+                    dropdownAgudas.onclick = () => {
+                      dropdownAgudas.classList.toggle("active");
+                    };
+                  </script>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="menu__principal">
+          <span class="box__padrao" onclick="showDropAntropo()">
+            <span class="texto__primario">Antropozoonoses</span>
+            <div class="dropBackground" id="dropAntropo">
+              <div
+                class="box__modal border__antropo"
+                onclick="event.stopPropagation()"
+              >
+                <div class="align__items">
+                  <span class="texto__titulo">O que são?</span>
+                  <span class="texto__secundario">
+                    Antropozoonoses são doenças primárias de animais que podem
+                    ser transmitidas para os seres humanos e podem ser causadas
+                    por vírus, bactérias ou parasitas.
+                  </span>
+                </div>
+                <div class="select__div">
+                  <div class="dropdownAntropo">
+                    <input
+                      type="text"
+                      class="textBox"
+                      placeholder="Selecione"
+                      readonly
+                    />
+                    <div class="option">
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/antirabnet');"
+                      >
+                        Atendimento Antirrábico
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/denguersnet');"
+                      >
+                        Dengue
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/zikarsnet');"
+                      >
+                        Doença pelo Zika Vírus
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/febreamarelarsnet');"
+                      >
+                        Febre Amarela
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/chikrsnet');"
+                      >
+                        Febre de Chikungunya
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/febremaculosarsnet');"
+                      >
+                        Febre Maculosa
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/leptorsnet');"
+                      >
+                        Leptospirose
+                      </div>
+                    </div>
+                  </div>
+                  <script
+                    type="module"
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                  ></script>
+                  <script
+                    nomodule
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                  ></script>
+
+                  <script>
+                    function select(anything) {
+                      document.querySelector(".textBox").value = anything;
+                    }
+
+                    let dropdownAntropo =
+                      document.querySelector(".dropdownAntropo");
+                    dropdownAntropo.onclick = () => {
+                      dropdownAntropo.classList.toggle("active");
+                    };
+                  </script>
+                </div>
+              </div>
+            </div>
+          </span>
+          <span class="box__padrao" tabindex="0" onclick="showDropTrabalho()">
+            <span class="texto__primario"
+              >Doenças Relacionadas ao Trabalho</span
+            >
+            <div class="dropBackground" id="dropTrabalho">
+              <div
+                class="box__modal border__trabalho"
+                onclick="event.stopPropagation()"
+              >
+                <div class="align__items">
+                  <span class="texto__titulo">O que são?</span>
+                  <span class="texto__secundario">
+                    São as doenças em que a atividade laboral é fator de risco
+                    desencadeante, contributivo ou agravante de um distúrbio
+                    latente ou de uma doença preestabelecida.
+                  </span>
+                </div>
+                <div class="select__div">
+                  <div class="dropdownTrabalho">
+                    <input
+                      type="text"
+                      class="textBox"
+                      placeholder="Selecione"
+                      readonly
+                    />
+                    <div class="option">
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/acbiors')"
+                      >
+                        Acidente de Trabalho com Exposição a Material Biológico
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/acidgra')"
+                      >
+                        Acidente de Trabalho Grave
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/animaisrsnet')"
+                      >
+                        Acidente por Animais Peçonhentos
+                      </div>
+                      <div
+                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/iexogrs')"
+                      >
+                        Intoxicação Exógena
+                      </div>
+                    </div>
+                  </div>
+                  <script
+                    type="module"
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                  ></script>
+                  <script
+                    nomodule
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                  ></script>
+
+                  <script>
+                    function select(anything) {
+                      document.querySelector(".textBox").value = anything;
+                    }
+
+                    let dropdownTrabalho =
+                      document.querySelector(".dropdownTrabalho");
+                    dropdownTrabalho.onclick = () => {
+                      dropdownTrabalho.classList.toggle("active");
+                    };
+                  </script>
+                </div>
+              </div>
+            </div>
+          </span>
+          <span class="box__padrao" onclick="showDropNotif()">
+            <span class="texto__primario">Notificações Individuais</span>
+            <div class="dropBackground" id="dropNotif">
+              <div
+                class="box__modal border__individuais"
+                onclick="event.stopPropagation()"
+              >
+                <div class="align__items">
+                  <span class="texto__titulo">O que são?</span>
+                  <span class="texto__secundario">
+                    Notificações individuais compulsórias são a comunicação
+                    obrigatória à autoridade de saúde, realizada pelos médicos,
+                    profissionais de saúde ou responsáveis pelos
+                    estabelecimentos de sáude, públicos ou privados, sobre a
+                    ocorrência de suspeita ou confirmação de doença, agravo ou
+                    evento de saúde pública.
+                  </span>
+                </div>
+                <div class="select__div">
+                  <button
+                    class="botao__individuais"
+                    type="button"
+                    onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/notindivinet');"
+                  >
+                    Notificação Individual
+                  </button>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="menu__principal">
+        <span class="box__secundario" onclick="showDropSIM()">
+          <span class="texto__primario">Óbitos - SIM</span>
+          <div class="dropBackground" id="dropSIM">
+            <div
+              class="box__modal border__SIM"
+              onclick="event.stopPropagation()"
+            >
+              <div class="align__items">
+                <span class="texto__titulo">O que é?</span>
+                <span class="texto__secundario">
+                  O Sistema de Informação Sobre Mortalidade (SIM) coleta dados
+                  sobre mortalidade no país a partir da causa mortis atestada
+                  pelo médico.
+                </span>
+              </div>
+              <div class="select__div">
+                <button
+                  class="botao__SIM"
+                  type="button"
+                  onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?SIM/Obito');"
+                >
+                  SIM
+                </button>
+              </div>
+            </div>
+          </div>
+        </span>
+        <span class="box__secundario" onclick="showDropSINASC()">
+          <span class="texto__primario">Nascidos Vivos - SINASC</span>
+          <div class="dropBackground" id="dropSINASC">
+            <div
+              class="box__modal border__SINASC"
+              onclick="event.stopPropagation()"
+            >
+              <div class="align__items">
+                <span class="texto__titulo">O que é?</span>
+                <span class="texto__secundario">
+                  O Sistema de Informações Sobre Nascidos Vivos (SINASC) coleta
+                  dados sobre os nascimentos informados em todo território
+                  nacional para fornecer dados sobre natalidade.
+                </span>
+              </div>
+              <div class="select__div">
+                <button
+                  class="botao__SINASC"
+                  type="button"
+                  onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?NASC/NASCIDO.DEF');"
+                >
+                  SINASC
+                </button>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <img src="img/rodape.png" />
+    </footer>
+  </body>
+</html>
