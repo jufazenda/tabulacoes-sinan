@@ -12,8 +12,9 @@
   --cor-agudas: #ffbf47;
   --cor-antropo: #978de2;
   --cor-trabalho: #48a9a6;
+  --cor-trabalho--hover: #3e8f8c;
   --cor-individuais: #fcb879;
-  --cor-individuaishover: #eb9b50;
+  --cor-individuais--hover: #eb9b50;
   --cor-cinza: #d3dcf7;
   --cor-secundaria: #91acff;
   --fonte: "Fira Code", monospace;
@@ -38,7 +39,7 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  gap: 60px; 
+  gap: 60px;
 }
 
 .menu__principal {
@@ -211,14 +212,34 @@ body {
   justify-content: flex-start;
 }
 
+.selects {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
 .show {
   display: flex;
 }
 
 .select__div {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+.texto__anos {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--fonte);
+  margin: 0 0 20px 40px;
+}
+
+.texto__anos__button {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--fonte);
+  margin-bottom: 20px;
 }
 
 /* Dropdown Transmissiveis */
@@ -275,9 +296,8 @@ body {
   background: #fff;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  overflow: hidden;
   display: none;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 150px;
   font-family: var(--fonte);
 }
@@ -292,6 +312,81 @@ body {
 }
 
 .dropdownTransmissiveis .option div:hover {
+  background: var(--cor-transmissiveis);
+  color: #fff;
+}
+
+/* Transmissiveis 1999 */
+
+.dropdownTransmissiveisAntigo {
+  display: flex;
+  position: relative;
+  width: 230px;
+  height: 30px;
+}
+
+.dropdownTransmissiveisAntigo::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  right: 0px;
+  left: 240px;
+  top: 15px;
+  z-index: 10000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdownTransmissiveisAntigo.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdownTransmissiveisAntigo input {
+  position: absolute;
+  font-family: var(--fonte);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.dropdownTransmissiveisAntigo .option {
+  position: absolute;
+  top: 70px;
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  overflow-y: auto;
+  max-height: 150px;
+  font-family: var(--fonte);
+}
+
+.dropdownTransmissiveisAntigo.active .option {
+  display: block;
+}
+
+.dropdownTransmissiveisAntigo .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdownTransmissiveisAntigo .option div:hover {
   background: var(--cor-transmissiveis);
   color: #fff;
 }
@@ -317,7 +412,6 @@ body {
   background: var(--cor-naohover);
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
 }
-
 
 .dropdownNT {
   display: flex;
@@ -467,6 +561,81 @@ body {
   color: #fff;
 }
 
+/* Agudas 1999 */
+
+.dropdownAgudasAntigo {
+  display: flex;
+  position: relative;
+  width: 230px;
+  height: 30px;
+}
+
+.dropdownAgudasAntigo::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  right: 0px;
+  left: 240px;
+  top: 15px;
+  z-index: 10000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdownAgudasAntigo.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdownAgudasAntigo input {
+  position: absolute;
+  font-family: var(--fonte);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.dropdownAgudasAntigo .option {
+  position: absolute;
+  top: 70px;
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  overflow-y: scroll;
+  max-height: 150px;
+  font-family: var(--fonte);
+}
+
+.dropdownAgudasAntigo.active .option {
+  display: block;
+}
+
+.dropdownAgudasAntigo .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdownAgudasAntigo .option div:hover {
+  background: var(--cor-agudas);
+  color: #fff;
+}
+
 /* Dropdown Antropo */
 
 .dropdownAntropo {
@@ -538,6 +707,81 @@ body {
 }
 
 .dropdownAntropo .option div:hover {
+  background: var(--cor-antropo);
+  color: #fff;
+}
+
+/* Antropo 1999 */
+
+.dropdownAntropoAntigo {
+  display: flex;
+  position: relative;
+  width: 230px;
+  height: 30px;
+}
+
+.dropdownAntropoAntigo::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  right: 0px;
+  left: 240px;
+  top: 15px;
+  z-index: 10000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdownAntropoAntigo.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdownAntropoAntigo input {
+  position: absolute;
+  font-family: var(--fonte);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.dropdownAntropoAntigo .option {
+  position: absolute;
+  top: 70px;
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  overflow-y: scroll;
+  max-height: 150px;
+  font-family: var(--fonte);
+}
+
+.dropdownAntropoAntigo.active .option {
+  display: block;
+}
+
+.dropdownAntropoAntigo .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdownAntropoAntigo .option div:hover {
   background: var(--cor-antropo);
   color: #fff;
 }
@@ -616,6 +860,29 @@ body {
   background: var(--cor-trabalho);
   color: #fff;
 }
+
+/* Trabalho 1999 */
+
+.botao__trabalho {
+  font-family: var(--fonte);
+  width: 250px;
+  height: 60px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--cor-trabalho);
+}
+
+.botao__trabalho:hover {
+  color: white;
+  background: var(--cor-trabalho--hover);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+}
+
 /* Dropdown Notif Indiviual */
 
 .botao__individuais {
@@ -634,7 +901,7 @@ body {
 
 .botao__individuais:hover {
   color: black;
-  background: var(--cor-individuaishover);
+  background: var(--cor-individuais--hover);
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
 }
 
