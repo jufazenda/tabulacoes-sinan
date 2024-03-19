@@ -156,83 +156,138 @@
                     bactérias e vírus.
                   </span>
                 </div>
-                <div class="select__div">
-                  <div class="dropdownTransmissiveis">
-                    <input
-                      type="text"
-                      class="textBox"
-                      placeholder="Selecione"
-                      readonly
-                    />
-                    <div class="option">
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/aidsanet')"
-                      >
-                        AIDS Adulto
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/aidscrinet')"
-                      >
-                        AIDS Criança
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/hansrsnet')"
-                      >
-                        Hanseníase
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsa')"
-                      >
-                        Hepatite A
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsb')"
-                      >
-                        Hepatite B
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsc')"
-                      >
-                        Hepatite C
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/sifiliscnet')"
-                      >
-                        Sífilis Congênita
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/sifilisgnet')"
-                      >
-                        Sífilis em Gestante
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/tubercrsnet')"
-                      >
-                        Tuberculose
+                <div class="selects">
+                  <div class="select__div">
+                    <span class="texto__anos">1999 - 2006</span>
+                    <div
+                      class="dropdownTransmissiveisAntigo"
+                      id="dropdownTransmissiveisAntigo"
+                    >
+                      <input
+                        type="text"
+                        class="textBox"
+                        placeholder="Selecione"
+                        readonly
+                      />
+                      <div class="option">
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/aidsw')"
+                        >
+                          AIDS Adulto
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/aidscw')"
+                        >
+                          AIDS Criança
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/hepavirsw')"
+                        >
+                          Hepatites
+                        </div>
                       </div>
                     </div>
+                    <script
+                      type="module"
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                    ></script>
+                    <script
+                      nomodule
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                    ></script>
+
+                    <script>
+                      function select(anything) {
+                        document.querySelector(".textBox").value = anything;
+                      }
+
+                      let dropdownTransmissiveisAntigo =
+                        document.getElementById("dropdownTransmissiveisAntigo");
+
+                      dropdownTransmissiveisAntigo.onclick = () => {
+                        dropdownTransmissiveisAntigo.classList.toggle("active");
+                      };
+                    </script>
                   </div>
-                  <script
-                    type="module"
-                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-                  ></script>
-                  <script
-                    nomodule
-                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-                  ></script>
+                  <div class="select__div">
+                    <span class="texto__anos">2007 - 2024</span>
+                    <div class="dropdownTransmissiveis">
+                      <input
+                        type="text"
+                        class="textBox"
+                        placeholder="Selecione"
+                        readonly
+                      />
+                      <div class="option">
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/aidsanet')"
+                        >
+                          AIDS Adulto
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/aidscrinet')"
+                        >
+                          AIDS Criança
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/hansrsnet')"
+                        >
+                          Hanseníase
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsa')"
+                        >
+                          Hepatite A
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsb')"
+                        >
+                          Hepatite B
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/heparsc')"
+                        >
+                          Hepatite C
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/sifiliscnet')"
+                        >
+                          Sífilis Congênita
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/sifilisgnet')"
+                        >
+                          Sífilis em Gestante
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/tubercrsnet')"
+                        >
+                          Tuberculose
+                        </div>
+                      </div>
+                    </div>
+                    <script
+                      type="module"
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                    ></script>
+                    <script
+                      nomodule
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                    ></script>
 
-                  <script>
-                    function select(anything) {
-                      document.querySelector(".textBox").value = anything;
-                    }
+                    <script>
+                      function select(anything) {
+                        document.querySelector(".textBox").value = anything;
+                      }
 
-                    let dropdownTransmissiveis = document.querySelector(
-                      ".dropdownTransmissiveis"
-                    );
-                    dropdownTransmissiveis.onclick = () => {
-                      dropdownTransmissiveis.classList.toggle("active");
-                    };
-                  </script>
+                      let dropdownTransmissiveis = document.querySelector(
+                        ".dropdownTransmissiveis"
+                      );
+                      dropdownTransmissiveis.onclick = () => {
+                        dropdownTransmissiveis.classList.toggle("active");
+                      };
+                    </script>
+                  </div>
                 </div>
               </div>
             </div>
@@ -316,67 +371,134 @@
                     virais e bacterianas.
                   </span>
                 </div>
-                <div class="select__div">
-                  <div class="dropdownAgudas">
-                    <input
-                      type="text"
-                      class="textBox"
-                      placeholder="Selecione"
-                      readonly
-                    />
-                    <div class="option">
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/coquersnet')"
-                      >
-                        Coqueluche
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/diftersw')"
-                      >
-                        Difteria
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/exantrsw')"
-                      >
-                        Doenças Exantemáticas
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/meningersnet')"
-                      >
-                        Meningite
-                      </div>
-                      <!--  <div
+                <div class="selects">
+                  <div class="select__div">
+                    <span class="texto__anos">1999 - 2006</span>
+                    <div class="dropdownAgudasAntigo">
+                      <input
+                        type="text"
+                        class="textBox"
+                        placeholder="Selecione"
+                        readonly
+                      />
+                      <div class="option">
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/coquersw')"
+                        >
+                          Coqueluche
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/diftersw')"
+                        >
+                          Difteria
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/exantrsw')"
+                        >
+                          Doenças Exantemáticas
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/meningersw')"
+                        >
+                          Meningite
+                        </div>
+                        <!--  <div
                         onclick="window.open('Síndrome Respiratória Aguda Grave')"
                       >
                         Síndrome Respiratória Aguda Grave
                       </div> -->
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/tetacidrsw')"
-                      >
-                        Tétano Acidental
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/tetacidrsw')"
+                        >
+                          Tétano Acidental
+                        </div>
                       </div>
                     </div>
+                    <script
+                      type="module"
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                    ></script>
+                    <script
+                      nomodule
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                    ></script>
+
+                    <script>
+                      function select(anything) {
+                        document.querySelector(".textBox").value = anything;
+                      }
+
+                      let dropdownAgudasAntigo = document.querySelector(
+                        ".dropdownAgudasAntigo"
+                      );
+                      dropdownAgudasAntigo.onclick = () => {
+                        dropdownAgudasAntigo.classList.toggle("active");
+                      };
+                    </script>
                   </div>
-                  <script
-                    type="module"
-                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-                  ></script>
-                  <script
-                    nomodule
-                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-                  ></script>
+                  <div class="select__div">
+                    <span class="texto__anos">2007 - 2024</span>
+                    <div class="dropdownAgudas">
+                      <input
+                        type="text"
+                        class="textBox"
+                        placeholder="Selecione"
+                        readonly
+                      />
+                      <div class="option">
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/coquersnet')"
+                        >
+                          Coqueluche
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/diftersw')"
+                        >
+                          Difteria
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/exantrsw')"
+                        >
+                          Doenças Exantemáticas
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/meningersnet')"
+                        >
+                          Meningite
+                        </div>
+                        <!--  <div
+                        onclick="window.open('Síndrome Respiratória Aguda Grave')"
+                      >
+                        Síndrome Respiratória Aguda Grave
+                      </div> -->
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/tetacidrsw')"
+                        >
+                          Tétano Acidental
+                        </div>
+                      </div>
+                    </div>
+                    <script
+                      type="module"
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                    ></script>
+                    <script
+                      nomodule
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                    ></script>
 
-                  <script>
-                    function select(anything) {
-                      document.querySelector(".textBox").value = anything;
-                    }
+                    <script>
+                      function select(anything) {
+                        document.querySelector(".textBox").value = anything;
+                      }
 
-                    let dropdownAgudas =
-                      document.querySelector(".dropdownAgudas");
-                    dropdownAgudas.onclick = () => {
-                      dropdownAgudas.classList.toggle("active");
-                    };
-                  </script>
+                      let dropdownAgudas =
+                        document.querySelector(".dropdownAgudas");
+                      dropdownAgudas.onclick = () => {
+                        dropdownAgudas.classList.toggle("active");
+                      };
+                    </script>
+                  </div>
                 </div>
               </div>
             </div>
@@ -398,72 +520,129 @@
                     por vírus, bactérias ou parasitas.
                   </span>
                 </div>
-                <div class="select__div">
-                  <div class="dropdownAntropo">
-                    <input
-                      type="text"
-                      class="textBox"
-                      placeholder="Selecione"
-                      readonly
-                    />
-                    <div class="option">
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/antirabnet');"
-                      >
-                        Atendimento Antirrábico
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/denguersnet');"
-                      >
-                        Dengue
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/zikarsnet');"
-                      >
-                        Doença pelo Zika Vírus
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/febreamarelarsnet');"
-                      >
-                        Febre Amarela
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/chikrsnet');"
-                      >
-                        Febre de Chikungunya
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/febremaculosarsnet');"
-                      >
-                        Febre Maculosa
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/leptorsnet');"
-                      >
-                        Leptospirose
+                <div class="selects">
+                  <div class="select__div">
+                    <span class="texto__anos">1999 - 2006</span>
+                    <div class="dropdownAntropoAntigo">
+                      <input
+                        type="text"
+                        class="textBox"
+                        placeholder="Selecione"
+                        readonly
+                      />
+                      <div class="option">
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/denguersw');"
+                        >
+                          Dengue
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/hantarsw');"
+                        >
+                          Hantavirose
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/leptorsw');"
+                        >
+                          Leptospirose
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/malarsw');"
+                        >
+                          Malária
+                        </div>
                       </div>
                     </div>
+                    <script
+                      type="module"
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                    ></script>
+                    <script
+                      nomodule
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                    ></script>
+
+                    <script>
+                      function select(anything) {
+                        document.querySelector(".textBox").value = anything;
+                      }
+
+                      let dropdownAntropoAntigo = document.querySelector(
+                        ".dropdownAntropoAntigo"
+                      );
+                      dropdownAntropoAntigo.onclick = () => {
+                        dropdownAntropoAntigo.classList.toggle("active");
+                      };
+                    </script>
                   </div>
-                  <script
-                    type="module"
-                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-                  ></script>
-                  <script
-                    nomodule
-                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-                  ></script>
+                  <div class="select__div">
+                    <span class="texto__anos">2007 - 2024</span>
+                    <div class="dropdownAntropo">
+                      <input
+                        type="text"
+                        class="textBox"
+                        placeholder="Selecione"
+                        readonly
+                      />
+                      <div class="option">
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/antirabnet');"
+                        >
+                          Atendimento Antirrábico
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/denguersnet');"
+                        >
+                          Dengue
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/zikarsnet');"
+                        >
+                          Doença pelo Zika Vírus
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/febreamarelarsnet');"
+                        >
+                          Febre Amarela
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/chikrsnet');"
+                        >
+                          Febre de Chikungunya
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/febremaculosarsnet');"
+                        >
+                          Febre Maculosa
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/leptorsnet');"
+                        >
+                          Leptospirose
+                        </div>
+                      </div>
+                    </div>
+                    <script
+                      type="module"
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                    ></script>
+                    <script
+                      nomodule
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                    ></script>
 
-                  <script>
-                    function select(anything) {
-                      document.querySelector(".textBox").value = anything;
-                    }
+                    <script>
+                      function select(anything) {
+                        document.querySelector(".textBox").value = anything;
+                      }
 
-                    let dropdownAntropo =
-                      document.querySelector(".dropdownAntropo");
-                    dropdownAntropo.onclick = () => {
-                      dropdownAntropo.classList.toggle("active");
-                    };
-                  </script>
+                      let dropdownAntropo =
+                        document.querySelector(".dropdownAntropo");
+                      dropdownAntropo.onclick = () => {
+                        dropdownAntropo.classList.toggle("active");
+                      };
+                    </script>
+                  </div>
                 </div>
               </div>
             </div>
@@ -485,52 +664,66 @@
                     latente ou de uma doença preestabelecida.
                   </span>
                 </div>
-                <div class="select__div">
-                  <div class="dropdownTrabalho">
-                    <input
-                      type="text"
-                      class="textBox"
-                      placeholder="Selecione"
-                      readonly
-                    />
-                    <div class="option">
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/acbiors')"
-                      >
-                        Acidente de Trabalho com Exposição a Material Biológico
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/acidgra')"
-                      >
-                        Acidente de Trabalho Grave
-                      </div>
-                      <div
-                        onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/animaisrsnet')"
-                      >
-                        Acidente por Animais Peçonhentos
+                <div class="selects">
+                  <div class="select__div">
+                    <span class="texto__anos__button">1999 - 2006</span>
+                    <button
+                      class="botao__trabalho"
+                      type="button"
+                      onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/animaisrsw');"
+                    >
+                      Acidente por Animais Peçonhentos
+                    </button>
+                  </div>
+                  <div class="select__div">
+                    <span class="texto__anos">2007 - 2024</span>
+                    <div class="dropdownTrabalho">
+                      <input
+                        type="text"
+                        class="textBox"
+                        placeholder="Selecione"
+                        readonly
+                      />
+                      <div class="option">
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/acbiors')"
+                        >
+                          Acidente de Trabalho com Exposição a Material
+                          Biológico
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/acidgra')"
+                        >
+                          Acidente de Trabalho Grave
+                        </div>
+                        <div
+                          onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/animaisrsnet')"
+                        >
+                          Acidente por Animais Peçonhentos
+                        </div>
                       </div>
                     </div>
+                    <script
+                      type="module"
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                    ></script>
+                    <script
+                      nomodule
+                      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                    ></script>
+
+                    <script>
+                      function select(anything) {
+                        document.querySelector(".textBox").value = anything;
+                      }
+
+                      let dropdownTrabalho =
+                        document.querySelector(".dropdownTrabalho");
+                      dropdownTrabalho.onclick = () => {
+                        dropdownTrabalho.classList.toggle("active");
+                      };
+                    </script>
                   </div>
-                  <script
-                    type="module"
-                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-                  ></script>
-                  <script
-                    nomodule
-                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-                  ></script>
-
-                  <script>
-                    function select(anything) {
-                      document.querySelector(".textBox").value = anything;
-                    }
-
-                    let dropdownTrabalho =
-                      document.querySelector(".dropdownTrabalho");
-                    dropdownTrabalho.onclick = () => {
-                      dropdownTrabalho.classList.toggle("active");
-                    };
-                  </script>
                 </div>
               </div>
             </div>
@@ -553,14 +746,29 @@
                     evento de saúde pública.
                   </span>
                 </div>
-                <div class="select__div">
-                  <button
-                    class="botao__individuais"
-                    type="button"
-                    onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/notindivinet');"
-                  >
-                    Notificação Individual
-                  </button>
+                <div class="selects">
+                  <div class="select__div">
+                    <span class="texto__anos__button">1999 - 2006</span>
+
+                    <button
+                      class="botao__individuais"
+                      type="button"
+                      onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?swin/notindivw');"
+                    >
+                      Notificação Individual
+                    </button>
+                  </div>
+                  <div class="select__div">
+                    <span class="texto__anos__button">2007 - 2024</span>
+
+                    <button
+                      class="botao__individuais"
+                      type="button"
+                      onclick="window.open('http://200.198.173.165/scripts/deftohtm.exe?snet/notindivinet');"
+                    >
+                      Notificação Individual
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -625,7 +833,7 @@
         </span>
       </div>
       <span class="texto__secundario" style="text-align: center"
-        >Última atualização em 08/02/2024</span
+        >Última atualização em 15/03/2024</span
       >
     </div>
 
